@@ -1,0 +1,31 @@
+# vamos aprender como faz uma calculadora simples usando python
+print("calculadora simples")
+
+# agora irei criar a funcao dos numeros que o usuario irá inserir 
+
+number1 = float(input("type the number one:"))
+number2 = float(input("type the number two:"))
+
+operation = input("select one operation(+, -, /, *):")
+
+# agora irei criar a funcao de operacao matematica
+
+if operation == "*":
+  result = number1 * number2
+
+elif operation == "-":
+  result = number1 - number2
+
+elif operation ==  "/":
+ result = number1 / number2
+
+elif operation ==   '+':
+ result = number1 + number2
+
+else:
+  print("tu e burro mn? deu merda ai no bagulho ai krl!")
+  result = None
+
+print("result:", result)
+
+# fizemos uma calculador simples, proximo projeto iremos melhorar para gerar um loop!!!
