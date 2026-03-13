@@ -1,0 +1,50 @@
+# vamos aprender como faz uma calculadora simples com repeticao!
+while True:
+  print("calculadora simples com repeticao")
+
+# agora irei criar a funcao dos numeros que o usuario irá inserir 
+  try:
+      
+   number1 = float(input("type the number one:"))
+   number2 = float(input("type the number two:"))
+   
+  except ValueError:
+     print("number6 invalid")
+     continue
+     
+  operation = input("select one operation(+, -, /, *):")
+
+# agora irei criar a funcao de operacao matematica
+
+  if operation == "*":
+   result = number1 * number2
+
+  elif operation == "-":
+   result = number1 - number2
+
+  elif operation ==  "/":
+    result = number1 / number2
+
+  elif operation ==   '+':
+    result = number1 + number2
+
+  else:
+   print("tu e burro mn? deu merda ai no bagulho ai krl!")
+   continue
+
+  print("result:", result)
+  
+  # validation result
+
+  while True:
+    
+   again = input("want the new calculation? (y/n): ")
+
+   if again.lower() == "y":
+    break
+   elif again.lower() == "n":
+       exit()
+     
+   else:
+       print("select: y/n")
+
