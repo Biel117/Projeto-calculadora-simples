@@ -1,0 +1,61 @@
+# vamos aprender como faz uma calculadora simples com repeticao!
+#primeiro comecamos com uma funcaode de repeticao e repetimos o processo de código, onde aplico o conextos, funcoes e variaveis basicas.
+# comecamos com a informacao que oo sistema ira imprimir para nós no terminal
+while True:
+  print("calculadora simples com repeticao")
+
+# agora irei criar a funcao dos numeros que o usuario irá inserir 
+  try:
+      
+   number1 = float(input("type the number one:"))
+   number2 = float(input("type the number two:"))
+   
+  except ValueError:
+     print("number invalid")
+     continue
+     
+  operation = input("select one operation(+, -, /, *):")
+
+# agora irei criar a funcao de operacao matematica para cada variavel operativa
+
+  if operation == "*":
+   result = number1 * number2
+
+  elif operation == "-":
+   result = number1 - number2
+
+  elif operation ==  "/":
+      try: 
+          result = number1 / number2
+          
+      except ZeroDivisionError:
+         print("error: not possible division by zero")
+         continue
+   #implementei uma verificacao, para caso o usuario tente realizar uma divisao por zero.    
+      except Exception:
+          print("Unexpected error occurred")
+          continue
+      
+  elif operation ==   '+':
+    result = number1 + number2
+
+  else:
+   print("invalid valor!")
+   continue
+ 
+  print("result:", result)
+  
+  # validation result
+
+  while True:
+    
+   again = input("want the new calculation? (y/n): ")
+
+   if again.lower() == "y":
+    break
+   elif again.lower() == "n":
+       exit()
+     
+   else:
+       print("select: y/n")
+
